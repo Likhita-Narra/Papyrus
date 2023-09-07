@@ -102,3 +102,27 @@ var swiper = new Swiper(".arrivals-slider", {
         },
     },
 });
+
+function validateForm(event) {
+    event.preventDefault();
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    var valid = true;
+
+    if (username == null || username == "") {
+        alert("Name cannot be empty");
+        valid = false;
+    }
+
+    else if (password == null || password == "") {
+        alert("Password cannot be empty");
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("user-form").style.display = "block";
+        document.getElementById("username_logged").innerHTML = username;
+    }
+} 

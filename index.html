@@ -55,19 +55,25 @@
 
         <div id="close-login-btn" class="fas fa-times"></div>
 
-        <form action="">
-            <h3>Sign in</h3>
+        <form action="" id="login-form" onsubmit="return validateForm(event);">
+            <h3 id="">Sign in</h3>
             <span>Username</span>
-            <input type="email" name="" class="box" placeholder="Enter your email" id="">
+            <input type="email" name="" class="box" placeholder="Enter your email" id="username">
             <span>Password</span>
-            <input type="password" name="" class="box" placeholder="Enter your password" id="">
+            <input type="password" name="" class="box" placeholder="Enter your password" id="password">
             <div class="checkbox">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me"> Remember me</label>
             </div>
             <input type="submit" value="Sign in" class="btn">
             <p>Forgot password? <a href="#">Click here</a></p>
-            <p>Don't have an account? <a href="#">Create one</a></p>
+            <p>Don't have an account? <a href="signup.html">Create one</a></p>
+        </form>
+
+        <form action="" id="user-form" onsubmit="return logoutForm();" style="display: none; text-align: center;">
+            <h3 id="">Logged in</h3><br>
+            <span style="display: inline;">Username: <p id="username_logged" style="display: inline;"></p></span><br><br>
+            <input type="submit" value="Sign out" class="btn">
         </form>
     </div>
 
